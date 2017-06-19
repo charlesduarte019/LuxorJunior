@@ -108,11 +108,10 @@ plane {
 	#if (frame_number > 16 & frame_number <= 20)
 		rotate<0, 0, (frame_number-16) * -10>
 		translate<(frame_number-16) * 5, (frame_number-16) * 2, 0>
-	#else
-		#if (frame_number > 20 & frame_number <= 24)
-			rotate<0, 0, (25 - frame_number) * 10>
-			translate<(frame_number-16) * 5, (24 - frame_number) * 2, 0>
-		#end
+	#end
+	#if (frame_number > 20 & frame_number <= 24)
+		rotate<0, 0, (25 - frame_number) * 10>
+		translate<(frame_number-16) * 5, (24 - frame_number) * 2, 0>
 	#end
 }
 
@@ -137,63 +136,19 @@ plane {
 #object{
 	bodyBase
 	rotate<0, 0, 45>
-	#switch (frame_number)
-	// Agachamento do bodyBase
-	#case (9)
-		rotate<0, 0, 5>
-	#break
-	#case (10)
-		rotate<0, 0, 10>
-	#break
-	#case (11)
-		rotate<0, 0, 15>
-	#break
-	#case(12)
-		rotate<0, 0, 20>
-	#break
-	// Return do bodyBase
-	#case(13)
-		rotate<0, 0, 15>
-	#break
-	#case(14)
-		rotate<0, 0, 10>
-	#break
-	#case(15)
-		rotate<0, 0, 5>
-	#break
-	// Levantamento e trajeto do bodyBase
-	#case (17)
-		rotate<0, 0, -5>
-		translate<5, 2, 0>
-	#break
-	#case (18)
-		rotate<0, 0, -10>
-		translate<10, 4, 0>
-	#break
-	#case (19)
-		rotate<0, 0, -15>
-		translate<15, 6, 0>
-	#break
-	#case (20)
-		rotate<0, 0, -20>
-		translate<20, 8, 0>
-	#break
-	// Descida e trajeto do bodyBase
-	#case(21)
-		rotate<0, 0, -15>
-		translate<25, 6, 0>
-	#break
-	#case(22)
-		rotate<0, 0, -10>
-		translate<30, 4, 0>
-	#break
-	#case(23)
-		rotate<0, 0, -5>
-		translate<35, 2, 0>
-	#break
-	#case(24)
-		translate<40, 0, 0>
-	#break
+	#if (frame_number > 8 & frame_number <= 12)
+		rotate<0, 0, (frame_number - 8) * 5>
+	#end
+	#if (frame_number > 12 & frame_number <= 16)
+		rotate<0, 0, (16 - frame_number) * 5>
+	#end
+	#if (frame_number > 16 & frame_number <= 20)
+		rotate<0, 0, (frame_number - 16) * -5>
+		translate<(frame_number-16) * 5, (frame_number-16) * 2, 0>
+	#end
+	#if (frame_number > 20 & frame_number <= 24)
+		rotate<0, 0, (24 - frame_number) * -5>
+		translate<(frame_number-16) * 5, (24 - frame_number) * 2, 0>
 	#end
 }
 
