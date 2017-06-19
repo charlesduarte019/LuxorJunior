@@ -335,12 +335,13 @@ plane {
 	rotate<0, 0, 45> 
 }
 
-/*
+
 #object {
 	head
 	translate<0, -4, 0>
 	#switch (frame_number)
 	// Apresentation Head
+	/*
 	#case (0)
 		rotate<0, 0, 45>
 		translate<6, 6, 0>
@@ -387,6 +388,7 @@ plane {
 		translate<6, 6, 0>
 		rotate<0, 0, 45>
 	#break
+	*/
 	// Inclinação da Head para agachamento
 	#case (9)
 		rotate<0, 0, 40>
@@ -488,4 +490,3 @@ plane {
 	#break
 	#end
 }
-*/
